@@ -15,6 +15,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func enableDarkMode(_ sender: Any) {
+        if(view.backgroundColor == UIColor.systemBackground){
+                view.backgroundColor = UIColor.darkGray
+                
+        }else{
+        view.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
 }
 
