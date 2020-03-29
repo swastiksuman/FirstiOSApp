@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let dailyTasks = ["Wake Up", "Excercise", "Breakfast", "Code"]
     
     let weeklyTasks = ["Grocery", "Tennis"]
     
     let monthlyTasks = ["Electricity Bill", "House Rent", "Telephone Bill"]
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected \(indexPath.section)")
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -79,6 +83,15 @@ class ViewController: UIViewController, UITableViewDataSource {
                     let thisLabel = item as! UILabel
                     thisLabel.textColor = UIColor.white
                 }
+                if(item is UITableView){
+                    let thisTableView = item as! UITableView
+                    thisTableView.backgroundColor = UIColor.darkGray
+                    for cell in thisTableView.visibleCells{
+                        let thisCell = cell as! UITableViewCell
+                        thisCell.backgroundColor = UIColor.darkGray
+                    }
+                }
+                
             }
             modeSwitcher.setTitle("Light Mode", for: .normal)
         }else{
