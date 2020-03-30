@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let dailyTasks = ["Wake Up", "Excercise", "Breakfast", "Code"]
     
-    let weeklyTasks = ["Grocery", "Tennis"]
+    let weeklyTasks = ["Grocery", "Tennis", "Vegetables", "Laundry"]
     
     let monthlyTasks = ["Electricity Bill", "House Rent", "Telephone Bill"]
     
