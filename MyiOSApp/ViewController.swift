@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let dailyTasks = ["Wake Up", "Excercise", "Breakfast", "Code"]
+    let dailyTasks = ["Wake Up", "Excercise", "Breakfast", "Code", "Lunch", "Daily Call", "Snacks", "Dinner"]
     
     let weeklyTasks = ["Grocery", "Tennis", "Vegetables", "Laundry"]
     
-    let monthlyTasks = ["Electricity Bill", "House Rent", "Telephone Bill"]
+    let monthlyTasks = ["Electricity Bill", "House Rent", "Telephone Bill", "TV Recharge"]
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected \(indexPath.section)")
@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("Call \(indexPath.row)s")
         let cell = UITableViewCell()
         switch indexPath.section{
         case 0:
