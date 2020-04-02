@@ -40,6 +40,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Call \(indexPath.row)s")
         let cell = UITableViewCell()
+        if(indexPath.row % 2 == 0 ){
+        cell.accessoryType =  .checkmark
+        }
         switch indexPath.section{
         case 0:
             cell.textLabel?.text = dailyTasks[indexPath.row]
